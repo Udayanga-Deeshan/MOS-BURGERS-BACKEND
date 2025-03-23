@@ -29,6 +29,10 @@ public class CustomerEntity {
     @Column(name = "is_deleted",columnDefinition = "TinyInt(1)",nullable = false)
     private boolean isDeleted;
 
+    public  void  softDelete(){
+        this.isDeleted =true;
+    }
+
 
 
 }

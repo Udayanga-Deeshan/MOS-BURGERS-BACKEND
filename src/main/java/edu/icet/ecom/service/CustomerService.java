@@ -11,4 +11,6 @@ public interface CustomerService {
     void updateCustomer(Customer customer);
 
     List<Customer>getAll();
+
+    boolean deletecustomer(Integer customerId);
 }

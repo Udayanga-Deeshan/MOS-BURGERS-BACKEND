@@ -23,4 +23,9 @@ public class CustomerServiceImpl implements CustomerService {
     public List<Customer> getAll() {
         return List.of();
     }
+
+    @Override
+    public boolean deletecustomer(Integer customerId) {
+        return false;
+    }
 }
