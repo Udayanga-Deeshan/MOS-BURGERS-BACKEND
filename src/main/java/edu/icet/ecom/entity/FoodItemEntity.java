@@ -30,10 +30,10 @@ public class FoodItemEntity {
 
     private String imageURl;
 
-    @Column(name = "is_expired",columnDefinition = "TinyInt(1)",nullable = false)
+    @Column(name = "is_expired",columnDefinition = "TINYINT(1)",nullable = false)
     private  boolean isExpired =false;
 
-    @Column(name = "is_removed", columnDefinition = "TinyInt(1)", nullable = false)
+    @Column(name = "is_removed", columnDefinition = "TINYINT(1)", nullable = false)
     private  boolean isRemoved =false;
 
     public  void  softDelete(){

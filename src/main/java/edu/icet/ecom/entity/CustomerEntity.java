@@ -26,7 +26,7 @@ public class CustomerEntity {
 
     private  String email;
 
-    @Column(name = "is_deleted",columnDefinition = "TinyInt(1)",nullable = false)
+    @Column(name = "is_deleted",columnDefinition = "TINYINT(1)",nullable = false)
     private boolean isDeleted;
 
     public  void  softDelete(){
