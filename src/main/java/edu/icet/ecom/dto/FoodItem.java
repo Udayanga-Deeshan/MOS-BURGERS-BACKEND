@@ -1,5 +1,6 @@
 package edu.icet.ecom.dto;
 
+import edu.icet.ecom.util.FoodCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,11 +16,10 @@ public class FoodItem {
 
     private String itemName;
 
-    private String category;
+    private FoodCategory category;
 
     private Double price;
 
-    private  Integer stock;
 
     private Double itemDiscount;
 

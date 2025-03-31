@@ -1,5 +1,6 @@
 package edu.icet.ecom.entity;
 
+import edu.icet.ecom.util.FoodCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,11 +21,14 @@ public class FoodItemEntity {
 
     private String itemName;
 
-    private String category;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "category")
+    private FoodCategory category;
 
     private Double price;
 
-    private  Integer stock;
+
+    private String imageURL;
 
     private Double itemDiscount;
 
