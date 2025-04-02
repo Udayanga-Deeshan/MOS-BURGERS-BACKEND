@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface StockService {
 
-    boolean addItem(FoodItem foodItem);
+    FoodItem addItem(FoodItem foodItem);
 
     List<FoodItem> getAllFoodItems();
 
-    boolean updateItem(FoodItem foodItem);
+    FoodItem updateItem(FoodItem foodItem);
 }

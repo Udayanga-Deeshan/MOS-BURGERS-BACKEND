@@ -12,20 +12,23 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StockController {
 
-   final StockService  stockService;
+
+    final StockService  stockService;
 
     @PostMapping("/add")
-    public  boolean addFoodItem(@RequestBody FoodItem foodItem){
+    public  FoodItem addFoodItem(@RequestBody FoodItem foodItem){
+        System.out.println(foodItem);
       return  stockService.addItem(foodItem);
+
     }
 
-    @GetMapping("/get-All")
+    @GetMapping("/All")
     public List<FoodItem>getAllFoodItems(){
         return stockService.getAllFoodItems();
     }
 
     @PutMapping("/update")
-    public boolean updateFoodItem(@RequestBody FoodItem foodItem){
+    public FoodItem updateFoodItem(@RequestBody FoodItem foodItem){
         return  stockService.updateItem(foodItem);
     }
 }

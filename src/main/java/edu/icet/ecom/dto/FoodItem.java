@@ -21,11 +21,7 @@ public class FoodItem {
     private Double price;
 
 
-    private Double itemDiscount;
+    private String imageURL;
 
-    private String imageURl;
 
-    private  boolean isExpired;
-
-    private  boolean isRemoved;
 }
