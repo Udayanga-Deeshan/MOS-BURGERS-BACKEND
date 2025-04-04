@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/customer")
 @RequiredArgsConstructor
+@CrossOrigin
 public class CustomerController {
 
    final CustomerService service;
