@@ -29,7 +29,7 @@ public class OrderEntity {
 
     @OneToMany(mappedBy = "order",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
-    private List<OrderDetail> orderDetails;
+    private List<OrderDetailEntity> orderDetails;
 
 
 }

@@ -1,5 +1,6 @@
 package edu.icet.ecom.dto;
 
+
 import lombok.*;
 
 @Getter
@@ -10,6 +11,7 @@ import lombok.*;
 public class OrderDetail {
 
     private  Integer orderDetailId;
+
 
     private FoodItem foodItem;
 
