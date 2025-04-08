@@ -19,7 +19,7 @@ public class OrderDetailEntity {
 
     @ManyToOne
     @JoinColumn(name = "orderId",referencedColumnName = "id", nullable = false)
-    private  OrderEntity orderEntity;
+    private  OrderEntity order;
 
     @ManyToOne
     @JoinColumn(name = "productId",referencedColumnName = "itemId", nullable = false)
