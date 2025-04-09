@@ -3,10 +3,7 @@ package edu.icet.ecom.controller;
 import edu.icet.ecom.dto.Order;
 import edu.icet.ecom.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -18,7 +15,8 @@ public class OrderController {
 
 
     @PostMapping("/place-order")
-    public void placeOrder(Order order){
+    public void placeOrder(@RequestBody Order order){
+        System.out.println("controller Order "+ order);
         orderService.placeOrder(order);
     }
 

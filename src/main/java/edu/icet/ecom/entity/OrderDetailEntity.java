@@ -1,6 +1,6 @@
 package edu.icet.ecom.entity;
 
-import edu.icet.ecom.dto.FoodItem;
+
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -12,7 +12,7 @@ public class OrderDetail {
 
     private  Integer orderDetailId;
 
-
+    private  Integer orderId;
     private FoodItem foodItem;
 
     private Integer qty;

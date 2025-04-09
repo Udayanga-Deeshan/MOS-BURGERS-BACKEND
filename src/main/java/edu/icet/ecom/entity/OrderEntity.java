@@ -1,7 +1,6 @@
 package edu.icet.ecom.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import edu.icet.ecom.dto.OrderDetail;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,14 +20,11 @@ public class OrderEntity {
 
     private String customerName;
 
-    private Integer contactNumber;
-
     private Double totalAmount;
 
     private Double receivedAmount;
 
-    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonIgnore
+    @OneToMany(mappedBy = "order" ,cascade = CascadeType.ALL)
     private List<OrderDetailEntity> orderDetails;
 
 
