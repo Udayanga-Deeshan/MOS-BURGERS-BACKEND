@@ -16,7 +16,6 @@ public class OrderController {
 
     @PostMapping("/place-order")
     public void placeOrder(@RequestBody Order order){
-        System.out.println("controller Order "+ order);
         orderService.placeOrder(order);
     }
 

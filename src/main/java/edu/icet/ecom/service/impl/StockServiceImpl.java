@@ -40,4 +40,9 @@ public class StockServiceImpl  implements StockService {
         return mapper.map(stockRepository.save(mapper.map(foodItem,FoodItemEntity.class)),FoodItem.class);
 
     }
+
+    @Override
+    public void removeFood(Integer id) {
+        stockRepository.deleteById(id);
+    }
 }

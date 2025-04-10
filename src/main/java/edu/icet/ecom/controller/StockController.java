@@ -43,5 +43,10 @@ public class StockController {
         return  stockService.updateItem(foodItem);
     }
 
+    @DeleteMapping("/remove-product/{id}")
+    public  void removeFood(@PathVariable Integer id){
+        stockService.removeFood(id);
+    }
+
 
 }

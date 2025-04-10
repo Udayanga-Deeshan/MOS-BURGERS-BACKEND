@@ -11,4 +11,6 @@ public interface StockService {
     List<FoodItem> getAllFoodItems();
 
     FoodItem updateItem(FoodItem foodItem);
+
+    void removeFood(Integer id);
 }
