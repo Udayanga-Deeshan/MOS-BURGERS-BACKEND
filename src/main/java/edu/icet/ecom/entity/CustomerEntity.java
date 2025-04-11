@@ -22,11 +22,11 @@ public class CustomerEntity {
 
     private String address;
 
-    private Integer contactNumber;
+    private String contactNumber;
 
     private  String email;
 
-    @Column(name = "is_deleted",columnDefinition = "TINYINT(1)",nullable = false)
+    @Column(name = "is_deleted",nullable = false)
     private boolean isDeleted;
 
     public  void  softDelete(){

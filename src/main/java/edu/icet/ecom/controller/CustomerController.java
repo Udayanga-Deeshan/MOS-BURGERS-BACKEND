@@ -25,7 +25,7 @@ public class CustomerController {
         service.updateCustomer(customer);
     }
 
-    @GetMapping("get-all")
+    @GetMapping("/all")
     List<Customer> allcustomer(){
         return  service.getAll();
     }

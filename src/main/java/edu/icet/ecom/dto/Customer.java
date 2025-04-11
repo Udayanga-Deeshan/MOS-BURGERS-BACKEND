@@ -17,7 +17,7 @@ public class Customer {
 
     private String address;
 
-    private Integer contactNumber;
+    private String contactNumber;
 
     private  String email;
 
