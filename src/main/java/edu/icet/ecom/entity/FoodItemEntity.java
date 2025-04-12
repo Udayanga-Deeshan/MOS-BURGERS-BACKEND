@@ -25,8 +25,9 @@ public class FoodItemEntity {
     @Column(name = "category")
     private FoodCategory category;
 
-    private Double price;
+    private String description;
 
+    private Double price;
 
     private String imageURL;
 

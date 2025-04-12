@@ -18,6 +18,8 @@ public class FoodItem {
 
     private FoodCategory category;
 
+    private String description;
+
     private Double price;
 
 
