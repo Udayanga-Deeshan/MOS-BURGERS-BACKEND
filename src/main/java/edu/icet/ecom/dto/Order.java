@@ -2,6 +2,7 @@ package edu.icet.ecom.dto;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -12,6 +13,8 @@ public class Order {
     private Integer id;
 
     private String customerName;
+
+    private LocalDateTime orderDate;
 
     private Double totalAmount;
 

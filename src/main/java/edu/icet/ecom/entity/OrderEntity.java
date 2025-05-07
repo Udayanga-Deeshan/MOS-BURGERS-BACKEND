@@ -4,6 +4,7 @@ package edu.icet.ecom.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -19,6 +20,9 @@ public class OrderEntity {
     private Integer id;
 
     private String customerName;
+
+    @Column(name = "order_date")
+    private LocalDateTime orderDate;
 
     private Double totalAmount;
 

@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -26,6 +27,7 @@ public class OrderServiceImpl implements OrderService {
     public void placeOrder(Order order) {
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.setCustomerName(order.getCustomerName());
+        orderEntity.setOrderDate(LocalDateTime.now());
         orderEntity.setTotalAmount(order.getTotalAmount());
         orderEntity.setReceivedAmount(order.getReceivedAmount());
 
