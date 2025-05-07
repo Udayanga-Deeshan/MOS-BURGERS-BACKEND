@@ -1,6 +1,7 @@
 package edu.icet.ecom.controller;
 
 import edu.icet.ecom.service.CustomerService;
+import edu.icet.ecom.service.OrderService;
 import edu.icet.ecom.service.StockService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +18,15 @@ import java.util.Map;
 public class DashboardController {
 
     final CustomerService customerService;
-
     final StockService stockService;
+    final OrderService orderService;
 
     @GetMapping("/counts")
     public ResponseEntity<Map<String,Long>>getCounts(){
         HashMap<String, Long> counts = new HashMap<>();
         counts.put("customers",customerService.countCustomers());
         counts.put("products",stockService.countFoodItems());
+        counts.put("orders",orderService.countOrders());
 
         return  ResponseEntity.ok(counts);
 

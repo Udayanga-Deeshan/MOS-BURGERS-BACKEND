@@ -49,4 +49,9 @@ public class OrderServiceImpl implements OrderService {
         System.out.println("Order details saved successfully for Order: " + savedOrder.getId());
     }
 
+    @Override
+    public Long countOrders() {
+        return orderRepository.count();
+    }
+
 }

@@ -53,6 +53,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public long countCustomers() {
-        return 0;
+        return customerRepository.count();
     }
 }

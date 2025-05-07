@@ -48,6 +48,6 @@ public class StockServiceImpl  implements StockService {
 
     @Override
     public long countFoodItems() {
-        return 0;
+        return stockRepository.count();
     }
 }
