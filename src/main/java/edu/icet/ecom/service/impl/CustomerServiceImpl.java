@@ -50,4 +50,9 @@ public class CustomerServiceImpl implements CustomerService {
         });
         return  true;
     }
+
+    @Override
+    public long countCustomers() {
+        return 0;
+    }
 }

@@ -45,4 +45,9 @@ public class StockServiceImpl  implements StockService {
     public void removeFood(Integer id) {
         stockRepository.deleteById(id);
     }
+
+    @Override
+    public long countFoodItems() {
+        return 0;
+    }
 }

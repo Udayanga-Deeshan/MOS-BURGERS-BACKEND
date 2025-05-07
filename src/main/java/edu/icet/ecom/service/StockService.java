@@ -13,4 +13,6 @@ public interface StockService {
     FoodItem updateItem(FoodItem foodItem);
 
     void removeFood(Integer id);
+
+    long countFoodItems();
 }

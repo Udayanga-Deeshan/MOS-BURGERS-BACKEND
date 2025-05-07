@@ -30,6 +30,7 @@ public class UserServiceImpl implements UserService {
         encryptor.setPassword(key);
 
         String decryptedPassword = encryptor.decrypt(entity.getPassword());
+        System.out.println(decryptedPassword);
         if(!decryptedPassword.equals(password)){
            throw  new RuntimeException("Invalid Password");
         }

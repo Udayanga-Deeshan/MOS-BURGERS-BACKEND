@@ -13,4 +13,6 @@ public interface CustomerService {
     List<Customer>getAll();
 
     boolean deletecustomer(Integer customerId);
+    
+    long countCustomers();
 }
