@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -54,6 +55,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Long countOrders() {
         return orderRepository.count();
+    }
+
+    @Override
+    public List<Order> allOrders() {
+        return orderRepository.findAll().stream()
+                .map(orderEntity -> mapper.map(orderEntity,Order.class))
+                .collect(Collectors.toList());
     }
 
 }

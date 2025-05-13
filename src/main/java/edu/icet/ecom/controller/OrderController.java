@@ -5,6 +5,8 @@ import edu.icet.ecom.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/api/order")
@@ -17,6 +19,11 @@ public class OrderController {
     @PostMapping("/place-order")
     public void placeOrder(@RequestBody Order order){
         orderService.placeOrder(order);
+    }
+
+    @GetMapping("/all")
+    public List<Order> allOrders(){
+        return  orderService.allOrders();
     }
 
 }
